@@ -3,7 +3,7 @@
 describe 'opendistro::repository' do
   case os.family
   when 'debian'
-    describe apt('https://packages.khulnasoft.com/4.x/apt/') do
+    describe apt('https://packages.wazuh.com/4.x/apt/') do
       it { should exist }
       it { should be_enabled }
     end
