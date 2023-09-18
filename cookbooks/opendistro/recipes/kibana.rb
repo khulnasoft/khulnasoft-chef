@@ -56,7 +56,7 @@ end
 # Install the Khulnasoft Kibana plugin
 
 execute 'Install Khulnasoft Kibana plugin' do
-  command "sudo -u kibana #{node['kibana']['package_path']}/bin/kibana-plugin install https://packages.wazuh.com/#{node['khulnasoft']['major_version']}/ui/kibana/khulnasoft_kibana-#{node['khulnasoft']['kibana_plugin_version']}-1.zip"
+  command "sudo -u kibana #{node['kibana']['package_path']}/bin/kibana-plugin install https://packages.khulnasoft.com/#{node['khulnasoft']['major_version']}/ui/kibana/khulnasoft_kibana-#{node['khulnasoft']['kibana_plugin_version']}-1.zip"
   not_if {
     Dir.exist?("#{node['kibana']['plugins_path']}/khulnasoft")
   }

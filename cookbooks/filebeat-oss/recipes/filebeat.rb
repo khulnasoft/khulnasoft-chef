@@ -51,7 +51,7 @@ end
 # Download the Khulnasoft module for Filebeat
 
 execute 'Extract Khulnasoft module' do
-  command "curl -s https://packages.wazuh.com/#{node['khulnasoft']['major_version']}/filebeat/#{node['filebeat']['khulnasoft_module']} | tar -xvz -C #{node['filebeat']['khulnasoft_module_path']}"
+  command "curl -s https://packages.khulnasoft.com/#{node['khulnasoft']['major_version']}/filebeat/#{node['filebeat']['khulnasoft_module']} | tar -xvz -C #{node['filebeat']['khulnasoft_module_path']}"
   action :run
 end
 

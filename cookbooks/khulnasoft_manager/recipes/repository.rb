@@ -12,8 +12,8 @@ when 'debian', 'ubuntu'
   end
 
   apt_repository 'khulnasoft' do
-    key 'https://packages.wazuh.com/key/GPG-KEY-WAZUH'
-    uri "https://packages.wazuh.com/#{node['khulnasoft']['major_version']}/apt/"
+    key 'https://packages.khulnasoft.com/key/GPG-KEY-KHULNASOFT'
+    uri "https://packages.khulnasoft.com/#{node['khulnasoft']['major_version']}/apt/"
     components ['main']
     distribution 'stable'
     action :add
@@ -24,18 +24,18 @@ when 'redhat', 'centos', 'amazon', 'fedora', 'oracle'
   yum_repository 'khulnasoft' do
     description 'KHULNASOFT Yum Repository - www.khulnasoft.com'
     gpgcheck true
-    gpgkey 'https://packages.wazuh.com/key/GPG-KEY-WAZUH'
+    gpgkey 'https://packages.khulnasoft.com/key/GPG-KEY-KHULNASOFT'
     enabled true 
-    baseurl "https://packages.wazuh.com/#{node['khulnasoft']['major_version']}/yum/"
+    baseurl "https://packages.khulnasoft.com/#{node['khulnasoft']['major_version']}/yum/"
     action :create
   end
 when 'opensuseleap', 'suse'
   zypper_repository 'khulnasoft' do   
     description 'KHULNASOFT Zypper Repository - www.khulnasoft.com'
     gpgcheck true
-    gpgkey 'https://packages.wazuh.com/key/GPG-KEY-WAZUH'
+    gpgkey 'https://packages.khulnasoft.com/key/GPG-KEY-KHULNASOFT'
     enabled true 
-    baseurl "https://packages.wazuh.com/#{node['khulnasoft']['major_version']}/yum/"
+    baseurl "https://packages.khulnasoft.com/#{node['khulnasoft']['major_version']}/yum/"
     action :create
   end
 else

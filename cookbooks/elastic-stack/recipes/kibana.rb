@@ -61,7 +61,7 @@ execute 'Create khulnasoft.yml parent folders' do
 end
 
 execute 'Install the Khulnasoft app plugin for Kibana' do
-  command "sudo -u kibana #{node['kibana']['package_path']}/bin/kibana-plugin install https://packages.wazuh.com/#{node['khulnasoft']['major_version']}/ui/kibana/khulnasoft_kibana-#{node['khulnasoft']['kibana_plugin_version']}-1.zip"
+  command "sudo -u kibana #{node['kibana']['package_path']}/bin/kibana-plugin install https://packages.khulnasoft.com/#{node['khulnasoft']['major_version']}/ui/kibana/khulnasoft_kibana-#{node['khulnasoft']['kibana_plugin_version']}-1.zip"
   not_if do
     File.exist?("#{node['kibana']['package_path']}/optimize/khulnasoft/config/khulnasoft.yml")
   end
