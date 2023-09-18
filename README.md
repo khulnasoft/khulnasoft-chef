@@ -49,7 +49,7 @@ We recommend using Chef Workstation for testing.
 You can find predefined roles for a default installation of:
 
 1. [khulnasoft_server](roles/khulnasoft_server.json): Khulnasoft Manager and Filebeat
-2. [wazhu_server_oss](roles/khulnasoft_server_oss.json): Khulnasoft Manager and Filebeat OSS
+2. [khulnasoft_server_oss](roles/khulnasoft_server_oss.json): Khulnasoft Manager and Filebeat OSS
 3. [khulnasoft_agent](roles/khulnasoft_agent.json): Khulnasoft Agent
 4. [elastic_stack](roles/elastic_stack.json): Elasticsearch and Kibana
 5. [opendistro](roles/opendistro.json): Elasticsearch OSS and Kiban OSS

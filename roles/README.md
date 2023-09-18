@@ -3,7 +3,7 @@
 There are 5 types of roles:
 
 1. **khulnasoft_server**: Khulnasoft Manager and Filebeat
-2. **wazhu_server_oss**: Khulnasoft Manager and Filebeat OSS
+2. **khulnasoft_server_oss**: Khulnasoft Manager and Filebeat OSS
 3. **khulnasoft_agent**: Khulnasoft Agent
 4. **elastic_stack**: Elasticsearch and Kibana
 5. **opendistro**: Elasticsearch OSS and Kiban OSS
