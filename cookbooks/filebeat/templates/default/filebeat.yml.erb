@@ -1,0 +1,19 @@
+# Khulnasoft - Filebeat configuration file
+filebeat.modules:
+  - module: khulnasoft
+    alerts:
+      enabled: true
+    archives:
+      enabled: false
+
+setup.template.json.enabled: true
+setup.template.json.path: '/etc/filebeat/khulnasoft-template.json'
+setup.template.json.name: 'khulnasoft'
+setup.template.overwrite: true
+setup.ilm.enabled: false
+
+output.elasticsearch.hosts: [
+  <% @hosts.each do |node| %>
+    "http://<%= node['ip'] %>:<%= node['port'] %>"
+  <% end %>
+]
